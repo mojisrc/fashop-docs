@@ -25,3 +25,7 @@ yarn docs:dev # 或者：npm run docs:dev
 ```bash
 yarn docs:build # 或者：npm run docs:build
 ```
+
+
+#### 图片使用
+文档里的图片请使用相对路径，引入的时候如：./images/xxx.png，为了规范，请至少创建一层文件夹`images`
