@@ -474,6 +474,46 @@ GET - /page/info
   ]
 }
 ```
+#### 拼团
+
+数据来源`source_type`：自动`auto`、选择`choose`
+
+商品排序`goods_sort`：销量多到少`1`、价格高到低`2`、价格低到高`3`
+
+显示数量`goods_display_num`：`3`， 最多12件，最少1件
+
+展示形式`layout_style`：大图`1`、小图`2`、列表`4`、轮播`5`
+
+> 默认自动添加、显示数量3、排序销量多到少、列表样式
+>
+> data 后端仅使用id，其他最终返回给客户端的数据都以商品表为准
+>
+> 传入对象是为了拓展，如：商品封面图替换，描述替换等
+
+```json
+{
+    type : 'goods_group',
+    options:{
+        source_type: "auto", 
+        goods_display_num: 3, 
+        goods_sort:1,
+		layout_style:4,
+    },
+    data:[
+        { 
+          id : 1,
+          img : 'http://xxxx.jpg',
+          title : '测试商品',
+          price : 200,
+          market_price : 300,
+          desc : '描述'
+        }
+    ]
+}
+```
+
+
+
 ## 链接说明
 
 link.action = portal 首页
