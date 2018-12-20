@@ -23,7 +23,7 @@ module.exports = {
     themeConfig: {
         repo: 'mojisrc/fashop',
         docsRepo: 'mojisrc/fashop-docs',
-        logo: 'logo.png',
+        logo: '/logo.png',
         editLinks: true,
         docsDir: 'docs',
         locales: {

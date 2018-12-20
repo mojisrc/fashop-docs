@@ -1,6 +1,6 @@
 {
-  "name": "VuePress",
-  "short_name": "VuePress",
+  "name": "FaShop",
+  "short_name": "FaShop",
   "icons": [
     {
       "src": "/icons/android-chrome-192x192.png",
@@ -16,5 +16,5 @@
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#fff",
-  "theme_color": "red"
+  "theme_color": "#e61d19"
 }
