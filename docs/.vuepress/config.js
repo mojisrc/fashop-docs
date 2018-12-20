@@ -64,12 +64,17 @@ module.exports = {
                                 link: '/docs/design/'
                             }
                         ]
-                    }
+                    },
+                    {
+                        text: '帮助',
+                        link: '/docs/help/',
+                    },
                 ],
                 sidebar: {
                     '/guide/': genGuideSidebarConfig('指南'),
                     '/docs/admin/': genSidebarAdminDocsConfig('管理端接口'),
                     '/docs/server/': genSidebarServerDocsConfig('客户端接口'),
+                    '/docs/help/': genSidebarHelpDocsConfig('帮助'),
                 }
             }
         }
@@ -143,6 +148,37 @@ function genSidebarServerDocsConfig(title) {
                 'wechat',
                 'address',
                 'area',
+                'buy',
+                'cart',
+                'version',
+            ]
+        }
+    ]
+}
+
+
+function genSidebarHelpDocsConfig(title) {
+    return [
+        {
+            title,
+            collapsable: false,
+            children: [
+                '',
+                'shop',
+                'goods',
+                'goods-category',
+                'goods-evaluate',
+                'goods-collect',
+                'goods-group',
+                'user',
+                'image',
+                'freight',
+                'order',
+                'order-refund',
+                'page',
+                'payment',
+                'wechat',
+                'address',
                 'buy',
                 'cart',
                 'version',
