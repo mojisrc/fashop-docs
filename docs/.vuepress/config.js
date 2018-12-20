@@ -21,6 +21,8 @@ module.exports = {
     ],
     serviceWorker: true,
     themeConfig: {
+        repo: 'mojisrc/fashop',
+        docsRepo: 'mojisrc/fashop-docs',
         logo: 'logo.png',
         editLinks: true,
         docsDir: 'docs',
