@@ -12,7 +12,7 @@
 
 如图所示：
 
-![image-20181221153314695](/Users/a/Documents/doc/fashop-docs/docs/docs/help/image-20181221153314695.png)
+![](./images/zhang9.png)
 
 2、添加分类
 
@@ -22,11 +22,11 @@
 
 ​        水果（0）= 苹果（3）+香蕉（5）
 
-![image-20181221154559852](/Users/a/Documents/doc/fashop-docs/docs/docs/help/image-20181221154559852.png)
+![](./images/zhang9.png)
 
 3、编辑分类
 
 如图所示：
 
-![image-20181221155122175](/Users/a/Library/Application Support/typora-user-images/image-20181221155122175.png)
+![](./images/zhang10.png)
 

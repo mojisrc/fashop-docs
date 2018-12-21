@@ -18,13 +18,13 @@
 
 如图所示：
 
-![image-20181221150056968](/Users/a/Documents/doc/fashop-docs/docs/docs/help/image-20181221150056968.png)
+![](./images/zhang4.png)
 
 2、商品规格，库存，库存计算选择对应的计算方式，商品编码（商家系统进行编码对接），商品规格，根据商品的型号进行选择。
 
 如图所示：
 
-![image-20181221151939247](/Users/a/Documents/doc/fashop-docs/docs/docs/help/image-20181221151939247.png)
+![](./images/zhang5.png)
 
 3、运费选择，统一运费，运费模版，开售时间选择
 
@@ -32,9 +32,7 @@
 
 如图所示：
 
-![image-20181221151453781](/Users/a/Documents/doc/fashop-docs/docs/docs/help/image-20181221151453781.png)
-
-![image-20181221151521303](/Users/a/Documents/doc/fashop-docs/docs/docs/help/image-20181221151521303.png)
+!![](./images/zhang6.png)
 
 4、商品详情，根据商品图和标题自动生成
 
@@ -42,6 +40,6 @@
 
 如图所示：
 
-![image-20181221152403203](/Users/a/Library/Application Support/typora-user-images/image-20181221152403203.png)
+![](./images/zhang16.png)
 
 5、	上架出售，放入仓库
