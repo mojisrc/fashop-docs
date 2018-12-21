@@ -12,7 +12,7 @@
 
 如图所示：
 
-![](./images/zhang9.png)
+![](./images/zhang3.png)
 
 2、添加分类
 
@@ -28,5 +28,4 @@
 
 如图所示：
 
-![](./images/zhang10.png)
-
+![](./images/zhang17.png)

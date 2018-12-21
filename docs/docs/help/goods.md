@@ -32,7 +32,7 @@
 
 如图所示：
 
-!![](./images/zhang6.png)
+![](./images/zhang6.png)
 
 4、商品详情，根据商品图和标题自动生成
 
