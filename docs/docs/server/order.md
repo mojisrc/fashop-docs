@@ -591,3 +591,50 @@ https://m.kuaidi100.com/index_all.html?type=[快递公司编码]&postid=[快递�
 callback地址，经测试填入javascript:alert(1);会生效，意味着前端开发者可以利用该特性填入js方法。
 
 [《快递100文档》](https://www.kuaidi100.com/openapi/mobileapi.shtml)
+
+
+
+## 拼团订单团信息[适用于订单详情]
+
+```html
+GET - /order/groupInfo
+```
+
+| 参数 | 是否必填 | 说明   |
+| ---- | -------- | ------ |
+| id   | 是       | 订单id |
+
+```
+ @return group_identity 1 团长 2 团员
+{
+    "code":0,
+    "result":{
+        "list":[
+            {
+                "group_identity":1,
+                "user_id":5,
+                "user_avatar":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erVKVc0ael431rYWjXrBZup9yEnicqlJTjwJKkNYDjAordm19DLzQJxu2CiaUnKzZQmic2JAzTSRW8CA/132"
+            },
+            {
+                "group_identity":2,
+                "user_id":4,
+                "user_avatar":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erZntjFe2TzRel14vWle6M8cyxjgHRPiapu0GCobaKbZTJGCicOy13ic9JahcJm5KZeQSEeOJetChJ6Q/132"
+            }
+        ]
+    },
+    "msg":null
+}
+```
+
+
+
+## 拼团订单列表自动过期 设置拼团失败
+
+```html
+GET - /order/antoSetOrderGroup
+```
+
+```
+
+```
+
