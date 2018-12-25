@@ -112,7 +112,7 @@ callback地址，经测试填入javascript:alert(1);会生效，意味着前端�
 
 
 
-## 修改订单价格[目前不适用于拼团]
+## 修改订单价格
 
 ```html
 POST /order/changePrice
@@ -122,3 +122,6 @@ POST /order/changePrice
 | ------------------ | -------- | ------------------------------------------------------------ |
 | revise_goods       | 是       | 订单商品 数组 格式 [['id'=>1,'difference_price'=>8], ['id'=>1,'difference_price'=>-8].......]   id 为 order_goods表id，difference_price为差价 可正可负 |
 | revise_freight_fee | 是       | 修改过的实际支付的运费 必须大于等于0                         |
+
+备注：目前只支持普通未支付的订单，不适用于拼团。
+
