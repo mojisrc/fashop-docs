@@ -118,6 +118,7 @@ function genSidebarAdminDocsConfig(title) {
                 'page',
                 'payment',
                 'shipper',
+                'logistics',
                 'statistics',
                 'user',
                 'wechat',
