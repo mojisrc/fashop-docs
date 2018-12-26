@@ -1,4 +1,5 @@
 # 订单
+
 ## 订单状态量
 
 ```html
@@ -472,18 +473,6 @@ GET - /order/info
 }
 ```
 
-
-
-## 物流跟踪【要废弃】
-
-```html
-GET - /order/deliver
-```
-
-| 参数   | 是否必填 | 说明   |
-| ---- | ---- | ---- |
-| id   | 是    | 订单id |
-
 ## 取消未付款订单
 
 ```html
@@ -584,17 +573,45 @@ GET - /order/goodsList
 
 ## 查看物流
 
-手机版本：
+```html
+GET - /order/logistics
+```
 
-https://m.kuaidi100.com/index_all.html?type=[快递公司编码]&postid=[快递单号]&callbackurl=[点击"返回"跳转的地址]
+| 参数 | 是否必填 | 类型 | 说明   |
+| ---- | -------- | ---- | ------ |
+| id   | 是       | int  | 订单id |
 
-callback地址，经测试填入javascript:alert(1);会生效，意味着前端开发者可以利用该特性填入js方法。
+返回
 
-[《快递100文档》](https://www.kuaidi100.com/openapi/mobileapi.shtml)
+```json
+{
+    "code":0,
+    "result":{
+        "url":"https://m.kuaidi100.com/index_all.html?type=全峰&postid=123456"
+    },
+    "msg":null
+}
+```
+
+前端开发者根据返回链接进行跳转。
+
+目前支持的是快递100，微信小程序对域名做了验证，请去微信公众平台设置小程序的授权域名`m.kuaidi100.com`。
+
+参考阅读：
+
+> 快递100接口简述
+>
+>  https://m.kuaidi100.com/index_all.html?type=[快递公司编码]&postid=[快递单号]&callbackurl=[点击"返回"跳转的地址]
+>
+> callback地址，经测试填入javascript:alert(1);会生效，意味着前端开发者可以利用该特性填入js方法。
+>
+> [《快递100文档》](https://www.kuaidi100.com/openapi/mobileapi.shtml)
 
 
 
-## 拼团订单团信息[适用于订单详情]
+## 拼团订单团信息
+
+> 适用于订单详情
 
 ```html
 GET - /order/groupInfo
@@ -604,8 +621,9 @@ GET - /order/groupInfo
 | ---- | -------- | ------ |
 | id   | 是       | 订单id |
 
-```
- @return group_identity 1 团长 2 团员
+group_identity `1` 团长 `2` 团员
+
+```json
 {
     "code":0,
     "result":{
@@ -634,7 +652,5 @@ GET - /order/groupInfo
 GET - /order/antoSetOrderGroup
 ```
 
-```
-
-```
+这个没明白什么意思
 
