@@ -204,6 +204,7 @@ function genSidebarPcadminDocsConfig(title) {
             children: [
                 '',
                 'structure',
+                'components'
             ]
         }
     ]
