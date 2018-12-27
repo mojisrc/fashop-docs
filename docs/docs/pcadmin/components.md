@@ -222,3 +222,36 @@ const keywords_type_list = [
 export default ExpressLis
 ```
 
+## PageList.Search
+
+可使用内组件介绍
+
+### input
+
+| 参数               | 类型     | 是否必填 | 说明                                   |
+| ------------------ | -------- | -------- | -------------------------------------- |
+| label              | 否       | 否       | 字段描述                               |
+| input.field        | string   | 是       | 字段名称                               |
+| input.placeholder  | string   | 否       | 占位文字                               |
+| input.onChange     | function | 否       | 当input发生改变时触发，闭包参数(value) |
+| input.initialValue | any      | 否       | 初始值                                 |
+
+```jsx
+const props = {
+    label:"名称",
+    input:{
+        field: null,
+        placeholder: null,
+        onChange: (value) => {},
+        initialValue: null
+    }
+}
+```
+
+select
+
+selectInput
+
+timeRange
+
+treeSelect
