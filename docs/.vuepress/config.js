@@ -190,6 +190,7 @@ function genSidebarHelpDocsConfig(title) {
                 'cart',
                 'version',
                 'mini-template',
+                'login-ways',
             ]
         }
     ]
