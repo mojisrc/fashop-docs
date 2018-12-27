@@ -56,6 +56,10 @@ module.exports = {
                                 link: '/docs/server/'
                             },
                             {
+                                text: 'PC后台',
+                                link: '/docs/pcadmin/'
+                            },
+                            {
                                 text: '小程序',
                                 link: '/docs/wechatmini/'
                             },
@@ -75,6 +79,7 @@ module.exports = {
                     '/docs/admin/': genSidebarAdminDocsConfig('管理端接口'),
                     '/docs/server/': genSidebarServerDocsConfig('客户端接口'),
                     '/docs/help/': genSidebarHelpDocsConfig('帮助'),
+                    '/docs/pcadmin/': genSidebarPcadminDocsConfig('PC后台'),
                 }
             }
         }
@@ -185,6 +190,19 @@ function genSidebarHelpDocsConfig(title) {
                 'cart',
                 'version',
                 'mini-template',
+            ]
+        }
+    ]
+}
+
+function genSidebarPcadminDocsConfig(title) {
+    return [
+        {
+            title,
+            collapsable: false,
+            children: [
+                '',
+                'structure',
             ]
         }
     ]
