@@ -9,7 +9,7 @@
 - 实例化后会设置分页、默认分页条数、表单所需要的初始值、跳转后获得数据的方法
 - PageList.Search为常用的搜索组件，可以设置默认值及跳转时约束其他参数关联关系，如：
 
-```jsx
+```Jsx
 import React, { Component, Fragment } from "react";
 import PageHeaderWrapper from "@/components/pageHeaderWrapper";
 import { Card, Button, Table, Tag, Divider, Modal } from "antd";

@@ -3,8 +3,8 @@ module.exports = {
     locales: {
         '/': {
             lang: 'zh-CN',
-            title: 'FaShop 开源商城系统',
-            description: 'FaShop 开源商城系统',
+            title: 'FaShop',
+            description: '开源商城系统,小程序商城系统,开源商城APP,开源商城小程序',
             keywords: 'FaShop,开源商城系统,小程序商城系统,开源商城APP,开源商城小程序',
         }
     },
