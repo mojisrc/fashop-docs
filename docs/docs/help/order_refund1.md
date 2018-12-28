@@ -46,7 +46,5 @@
 
 Fashop后台→订单→退款售后
 
-![](./images/huang_Refund_1.png)
-
-
+![](./images/huang_Refund1.png)
 

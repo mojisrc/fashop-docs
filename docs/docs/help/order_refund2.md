@@ -27,4 +27,4 @@
 
 Fashop后台→订单→退款售后→详情
 
-![](./images/huang_Refund_2.png)
+![](./images/huang_Refund2.png)
