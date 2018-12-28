@@ -587,7 +587,9 @@ GET - /order/logistics
 {
     "code":0,
     "result":{
-        "url":"https://m.kuaidi100.com/index_all.html?type=全峰&postid=123456"
+        "info":{
+            "url":"https://m.kuaidi100.com/index_all.html?type=zhongtong&postid=75114886914267"
+        }
     },
     "msg":null
 }
