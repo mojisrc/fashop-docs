@@ -8,14 +8,13 @@
 POST - /setting/edit
 ```
 
-| 参数   | 类型   | 是否必填                 | 说明                             |
-| ------ | ------ | ------------------------ | -------------------------------- |
-| key    | String | 是                       | 类型，`wechat`微信，唯一不可修改 |
-| name   | String | 否                       | 用途名字                         |
-| config | Object | 否，存在status字段时失效 | 配置详情                         |
-| status | Int    | 否                       | 是否开启，`1` 开启 `0` 关闭      |
-| remark | String | 否                       | 备注                             |
-
+| 参数   | 类型   | 是否必填 | 说明                             |
+| ------ | ------ | -------- | -------------------------------- |
+| key    | String | 是       | 类型，`wechat`微信，唯一不可修改 |
+| name   | String | 否       | 用途名字                         |
+| config | Object | 是       | 配置详情                         |
+| status | Int    | 否       | 是否开启，`1` 开启 `0` 关闭      |
+| remark | String | 否       | 备注                             |
 
 ## 配置详情
 
@@ -32,13 +31,13 @@ GET - /setting/info
 POST - /setting/add
 ```
 
-| 参数   | 类型   | 是否必填                 | 说明                                                       |
-| ------ | ------ | ------------------------ | ---------------------------------------------------------- |
-| key    | String | 是                       | 类型，`wechat`微信公众平台支付，唯一，数据库里不允许有重复 |
-| name   | String | 否                       | 用途名字                                                   |
-| config | Object | 否，存在status字段时失效 | 配置详情                                                   |
-| status | Int    | 否                       | 是否开启，`1` 开启 `0` 关闭                                |
-| remark | String | 否                       | 备注                                                       |
+| 参数   | 类型   | 是否必填 | 说明                                                       |
+| ------ | ------ | -------- | ---------------------------------------------------------- |
+| key    | String | 是       | 类型，`wechat`微信公众平台支付，唯一，数据库里不允许有重复 |
+| name   | String | 否       | 用途名字                                                   |
+| config | Object | 是       | 配置详情                                                   |
+| status | Int    | 否       | 是否开启，`1` 开启 `0` 关闭                                |
+| remark | String | 否       | 备注                                                       |
 
 ## config介绍
 
@@ -53,10 +52,10 @@ POST - /setting/add
 | mini_app_secret | String | 否                               | 小程序秘钥                                                 |
 | mch_id          | String | 否                               | 微信商户ID                                                 |
 | callback_domain | String | 否                               | 交易异步通知的域名                                         |
-| key             | String | 是                               | 微信商户API密钥                                            |
-| apiclient_cert  | String | 是（用到原路返回退款功能时需要） | 微信商户平台下载证书 cert.zip 中的 apiclient_cert.pem 文件 |
-| apiclient_key   | String | 是（用到原路返回退款功能时需要） | 微信商户平台下载证书 cert.zip 中的 apiclient_key.pem 文件  |
-| apiclient_cert  | String | 是（用到原路返回退款功能时需要） | 微信商户平台下载证书 cert.zip 中的 rootca.pem 文件         |
+| key             | String | 否                               | 微信商户API密钥                                            |
+| apiclient_cert  | String | 否（用到原路返回退款功能时需要） | 微信商户平台下载证书 cert.zip 中的 apiclient_cert.pem 文件 |
+| apiclient_key   | String | 否（用到原路返回退款功能时需要） | 微信商户平台下载证书 cert.zip 中的 apiclient_key.pem 文件  |
+| apiclient_cert  | String | 否（用到原路返回退款功能时需要） | 微信商户平台下载证书 cert.zip 中的 rootca.pem 文件         |
 
 > 证书的上传会用到admin/upload/addCert接口，这儿传入的是服务器的相对路径地址，因为证书不支持远程地址
 
@@ -116,9 +115,9 @@ TemplateObjectModel
 
 | 参数            | 类型   | 是否必填 | 说明                                                  |
 | --------------- | ------ | -------- | ----------------------------------------------------- |
-| template_id     | String | 模板ID   | 模板id                                                |
-| template_status | Int    | 模板开关 | 模板开关，预留，默认为1，未来可能需要开关某个模板消息 |
-| template_name   | String | 模板名称 | 属于备注，帮助前端方便输出显示                        |
+| template_id     | String | 是       | 模板id                                                |
+| template_status | Int    | 是       | 模板开关，预留，默认为1，未来可能需要开关某个模板消息 |
+| template_name   | String | 是       | 属于备注，帮助前端方便输出显示                        |
 
 Todo 这儿还需要细化，先占位记录，设计稿只是参考，因为没有要求用户选择哪个 是对不上的
 
@@ -169,8 +168,8 @@ TemplateObjectModel
 
 | 参数              | 类型                    | 是否必填 | 说明                                                         |
 | ----------------- | ----------------------- | -------- | ------------------------------------------------------------ |
-| template_id       | String                  | 模板ID   | 模板id                                                       |
-| template_status   | Int                     | 模板开关 | 模板开关，预留，默认为1，未来可能需要开关某个模板消息        |
-| template_variable | String \| Array[String] | 模板变量 | 模板里包含的${变量}，某些场景会存在多个，所以类型分两种，String和数组String |
-| template_name   | String | 模板名称 | 属于备注，帮助前端方便输出显示                        |
+| template_id       | String                  | 是   | 模板id                                                       |
+| template_status   | Int                     | 是 | 模板开关，预留，默认为1，未来可能需要开关某个模板消息        |
+| template_variable | String \| Array[String] | 是 | 模板里包含的${变量}，某些场景会存在多个，所以类型分两种，String和数组String |
+| template_name   | String | 是 | 属于备注，帮助前端方便输出显示                        |
 
