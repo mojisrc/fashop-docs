@@ -60,7 +60,9 @@ POST - /setting/add
 
 > 证书的上传会用到admin/upload/addCert接口，这儿传入的是服务器的相对路径地址，因为证书不支持远程地址
 
+
 - `alipay` 支付宝
+
 | 参数            | 类型   | 是否必填 | 说明               |
 | --------------- | ------ | -------- | ------------------ |
 | app_id          | String | 否       | 支付宝的APPID      |
@@ -75,7 +77,7 @@ POST - /setting/add
 | ------------- | ----------------------- | -------- | -------- |
 | template_list | TemplateListObjectModel | 是       | 模板列表 |
 
-template_list ( TemplateListObjectModel) 是个对象，并非数组，数据格式示例：
+template_list ( TemplateListObjectModel ) 是个对象，并非数组，数据格式示例：
 
 ```json
 {
