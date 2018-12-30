@@ -39,6 +39,8 @@ POST - /setting/add
 | status | Int    | 否       | 是否开启，`1` 开启 `0` 关闭                                |
 | remark | String | 否       | 备注                                                       |
 
+> 还在思考要不要废弃
+
 ## config介绍
 
 - `wechat` 微信
@@ -83,22 +85,26 @@ template_list ( TemplateListObjectModel ) 是个对象，并非数组，数据�
     "order_pay_success":{
         "template_id":"Y1blRZEdiqSXSDOfiKT9rG4oEmlpfeq_rjcpuuo",
         "template_name":"订单支付成功",
-        "template_status":1
+        "template_status":1,
+        "template_content": "1.订单号 2.订单总额 3.订单商品名称 4.下单时间 5.商品数量"
     },
     "order_pay_fail":{
         "template_id":"Y1blRZEdiqSXSDOfiKT9rG4oEmlpfeq_rjcpuuo",
         "template_name":"订单支付失败",
-        "template_status":1
+        "template_status":1,
+        "template_content": "1.订单号 2.订单总额 3.订单商品名称 4.下单时间 5.商品数量"
     },
     "order_cancel":{
         "template_id":"Y1blRZEdiqSXSDOfiKT9rG4oEmlpfeq_rjcpuuo",
         "template_name":"订单取消",
-        "template_status":1
+        "template_status":1,
+        "template_content": "1.订单号 2.订单总额 3.订单商品名称 4.下单时间 5.商品数量"
     },
     "order_refund_apply":{
         "template_id":"Y1blRZEdiqSXSDOfiKT9rG4oEmlpfeq_rjcpuuo",
         "template_name":"订单退款申请",
-        "template_status":1
+        "template_status":1,
+        "template_content": "1.订单号 2.订单总额 3.订单商品名称 4.下单时间 5.商品数量"
     }
 }
 ```
@@ -142,21 +148,23 @@ Todo 这儿还需要细化，先占位记录，设计稿只是参考，因为没
 | signature         | String                                                 | 是       | 短信签名         |
 | template_list     | TemplateListObjectModel[{string: TemplateObjectModel}] | 是       | 模板列表         |
 
-template_list ( TemplateListObjectMode l) 是个对象，并非数组，数据格式示例：
+template_list ( TemplateListObjectMode l) ，数据格式示例：
 
 ```json
 {
     "register":{
         "template_id":"SMS_xxxxx",
-        "template_name":"注册验证码",
+        "template_name":"注册",
         "template_variable":"code",
-        "template_status":1
+        "template_status":1,
+        "template_content":"您的注册码：${code}，如非本人操作，请忽略本短信！"
     },
     "find_password":{
         "template_id":"SMS_xxxxx",
-        "template_name":"找回密码验证码",
+        "template_name":"找回密码",
         "template_variable":"code",
-        "template_status":1
+        "template_status":1,
+        "template_content":"您的注册码：${code}，如非本人操作，请忽略本短信！"
     }
 }
 ```
@@ -173,3 +181,4 @@ TemplateObjectModel
 | template_variable | String \| Array[String] | 是 | 模板里包含的${变量}，某些场景会存在多个，所以类型分两种，String和数组String |
 | template_name   | String | 是 | 属于备注，帮助前端方便输出显示                        |
 
+> 当添加或者修改时，如template_variable是接口必须用到的，添加修改不起作用，仅为照顾版本升级
