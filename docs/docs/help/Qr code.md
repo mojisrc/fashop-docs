@@ -6,9 +6,7 @@
 
 2、创建二维码，可直接生成二维码。
 
-![](./images/code_zhang_1.png)
-
-![](./images/code_zhang_2.png)
+![](./images/code_zhang_11.png)
 
 
 

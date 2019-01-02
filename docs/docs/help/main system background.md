@@ -4,7 +4,7 @@
 
 1、应用分类分为，业务类，营销类，工具类，辅助类，每个分类对应的应用场景不同。
 
-![](./images/main_zhang_1.png)
+![](./images/main_zhang_1..png)
 
 
 
@@ -12,7 +12,7 @@
 
 添加应用如图所示：
 
-![](./images/main_zhang_2.png)
+![](./images/main_zhang_2..JPg)
 
 3、填写应用标题主信息
 

@@ -6,7 +6,7 @@
 
 ​      如图所示：
 
-![](./images/Evaluation_zhang_1.png)
+![](./images/Evaluation_zhang_1..png)
 
 
 
@@ -14,7 +14,7 @@
 
 ​       如图所示：
 
-![](./images/Evaluation_zhang_2.png)
+![](./images/Evaluation_zhang_2..png)
 
 
 
@@ -22,5 +22,5 @@
 
 ​      如图所示：
 
-![](./images/Evaluation_zhang_3.png)
+![](./images/Evaluation_zhang_3..png)
 

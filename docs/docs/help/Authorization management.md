@@ -4,11 +4,11 @@
 
 1、授权管理，是对用户针对不同的级别版本进行授权，每个级别所对应的应用功能也是不同。
 
-![](./images/managenmen_zhang_1.png)
+![](./images/managenmen_zhang_11.png)
 
 2、筛选，根据用户名称，授权版本，快速搜索用户信息。
 
-![](./images/managenmen_zhang_2.png)
+![](./images/managenmen_zhang_22.png)
 
 3、新增授权，选择用户进行授权，选择对应版本，选择授权应用管理。
 

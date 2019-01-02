@@ -6,15 +6,15 @@
 
 如图所示：
 
-![](./images/order_refund_1.png) 
+![](./images/order_refund_11.png) 
 
-![](./images/order_refund_2.png)
+![](./images/order_refund_22.png)
 
 可以执行操作，更改商品价格，可执行操作主要取决于订单状态，当前状态是属于待付款状态，所以可以进行改价。
 
 如图所示：
 
-![](./images/order_refund_3.png)
+![](./images/order_refund_33.png)
 
 ![](./images/order_refund_4.png)
 
@@ -80,8 +80,4 @@ b.退款退货、仅退款已收到货情况下，联系买家输入退款金额
 
 ![](./images/order_refund_10.png)
 
-确定发货地址，不需要物流，点击否
-
-如图所示：
-
-![](./images/order_refund_11.png)
+确定发货地址，不需要物流，点击否。
