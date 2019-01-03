@@ -64,12 +64,12 @@ POST - /setting/add
 
 - `alipay` 支付宝
 
-| 参数            | 类型   | 是否必填 | 说明               |
-| --------------- | ------ | -------- | ------------------ |
-| app_id          | String | 否       | 支付宝的APPID      |
-| public_key      | String | 否       | 支付宝公钥         |
-| private_key     | String | 否       | 支付宝私钥         |
-| callback_domain | String | 否       | 交易异步通知的域名 |
+| 参数                 | 类型   | 是否必填 | 说明                                                         |
+| -------------------- | ------ | -------- | ------------------------------------------------------------ |
+| app_id               | String | 否       | 支付宝的APPID                                                |
+| alipay_public_key    | String | 否       | 支付宝公钥 开放平台下的支付宝公钥                            |
+| merchant_private_key | String | 否       | 私钥 使用软件生成的2048私钥 私钥工具https://docs.open.alipay.com/291/106097 |
+| callback_domain      | String | 否       | 交易异步通知的域名                                           |
 
 - `wechat_mini_template` 小程序模板消息
 
