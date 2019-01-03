@@ -127,7 +127,7 @@ function genSidebarAdminDocsConfig(title) {
                 'statistics',
                 'user',
                 'wechat',
-                'mini-template',
+                'setting',
             ]
         }
     ]

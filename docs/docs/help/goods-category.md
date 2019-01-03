@@ -22,7 +22,7 @@
 
 ​        水果（0）= 苹果（3）+香蕉（5）
 
-![](./images/zhang9.png)
+![](./images/zhang9..png)
 
 3、编辑分类
 
