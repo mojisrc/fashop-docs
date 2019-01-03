@@ -38,3 +38,6 @@ GET - /payment/info
 | ---- | -------- | ---------------------- |
 | type | 是       | 类型，`wechat`微信支付 |
 
+### 支付宝接口设置介绍，待完善文档
+
+![image](https://ws1.sinaimg.cn/large/006tNbRwgy1fykkj60k0aj318w0towh6.jpg)

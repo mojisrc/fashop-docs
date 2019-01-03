@@ -24,6 +24,9 @@ yarn docs:dev # 或者：npm run docs:dev
 #### 要生成静态的 HTML 文件，运行：
 ```bash
 yarn docs:build # 或者：npm run docs:build
+
+# 查看编译好的网站
+serve -s website
 ```
 
 

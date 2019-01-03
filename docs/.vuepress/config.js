@@ -3,8 +3,8 @@ module.exports = {
     locales: {
         '/': {
             lang: 'zh-CN',
-            title: 'FaShop 开源商城系统',
-            description: 'FaShop 开源商城系统',
+            title: 'FaShop',
+            description: '开源商城系统,小程序商城系统,开源商城APP,开源商城小程序',
             keywords: 'FaShop,开源商城系统,小程序商城系统,开源商城APP,开源商城小程序',
         }
     },
@@ -56,6 +56,10 @@ module.exports = {
                                 link: '/docs/server/'
                             },
                             {
+                                text: 'PC后台',
+                                link: '/docs/pcadmin/'
+                            },
+                            {
                                 text: '小程序',
                                 link: '/docs/wechatmini/'
                             },
@@ -75,6 +79,7 @@ module.exports = {
                     '/docs/admin/': genSidebarAdminDocsConfig('管理端接口'),
                     '/docs/server/': genSidebarServerDocsConfig('客户端接口'),
                     '/docs/help/': genSidebarHelpDocsConfig('帮助'),
+                    '/docs/pcadmin/': genSidebarPcadminDocsConfig('PC后台'),
                 }
             }
         }
@@ -118,9 +123,11 @@ function genSidebarAdminDocsConfig(title) {
                 'page',
                 'payment',
                 'shipper',
+                'logistics',
                 'statistics',
                 'user',
                 'wechat',
+                'setting',
             ]
         }
     ]
@@ -182,6 +189,22 @@ function genSidebarHelpDocsConfig(title) {
                 'buy',
                 'cart',
                 'version',
+                'mini-template',
+                'login-ways',
+            ]
+        }
+    ]
+}
+
+function genSidebarPcadminDocsConfig(title) {
+    return [
+        {
+            title,
+            collapsable: false,
+            children: [
+                '',
+                'structure',
+                'components'
             ]
         }
     ]

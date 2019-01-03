@@ -13,6 +13,8 @@ POST - /shop/setBaseInfo
 | description    | 否    | 店铺描述   |
 | host           | 否    | 店铺访问地址 |
 
+
+
 ## 配色方案设置
 
 ```html

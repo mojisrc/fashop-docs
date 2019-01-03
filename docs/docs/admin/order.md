@@ -1,20 +1,21 @@
-# 订单
 ## 订单列表
 
 ```html
 GET | POST - /order/list
 ```
 
-| 参数             | 是否必填 | 说明                                       |
-| -------------- | ---- | ---------------------------------------- |
-| state_type     | 否    | 订单分类：待发货 `state_new` 、待付款`state_pay`、待发货 `state_send`、 已完成 `state_success`、已取消`state_cancel` |
-| keywords_type  | 否    | 搜索条件：商品名称`goods_name` 、订单号`order_no`、收货人姓名 `receiver_name`、收货人电话 `receiver_phone`、 快递单号`courier_number` |
-| keywords       | 否    | 关键词                                      |
-| create_time    | 否    | 数组，订单创建的开始时间[开始时间,结束时间]                  |
-| feedback_state | 否    | 维权状态：退款处理中 ` todo`、退款结束 `closed`         |
-| page           | 是    | 分页数                                      |
-| rows           | 是    | 条数                                       |
-| user_ids       | 否    | 用户id集合，数组，用于需要查询某个用户id的订单的场景             |
+| 参数             | 是否必填 | 说明                                                         |
+| ---------------- | -------- | ------------------------------------------------------------ |
+| state_type       | 否       | 订单分类：待发货 `state_new` 、待付款`state_pay`、待发货 `state_send`、 已完成 `state_success`、已取消`state_cancel` |
+| keywords_type    | 否       | 搜索条件：商品名称`goods_name` 、订单号`order_no`、收货人姓名 `receiver_name`、收货人电话 `receiver_phone`、 快递单号`courier_number` |
+| keywords         | 否       | 关键词                                                       |
+| create_time      | 否       | 数组，订单创建的开始时间[开始时间,结束时间]                  |
+| feedback_state   | 否       | 维权状态：退款处理中 ` todo`、退款结束 `closed`              |
+| page             | 是       | 分页数                                                       |
+| rows             | 是       | 条数                                                         |
+| user_ids         | 否       | 用户id集合，数组，用于需要查询某个用户id的订单的场景         |
+| group_state_type | 否       | 待付款group_state_new, 正在进行中(待开团)group_state_pay, 拼团成功group_state_success, 拼团失败group_state_fail |
+| order_type       | 否       | 1默认 2拼团                                                  |
 
 ## 订单详情
 
@@ -25,6 +26,18 @@ GET /order/info
 | 参数   | 是否必填 | 说明   |
 | ---- | ---- | ---- |
 | id   | 是    | 订单id |
+
+
+
+## 拼团订单团信息[适用于订单详情]
+
+```html
+GET /order/groupInfo
+```
+
+| 参数 | 是否必填 | 说明   |
+| ---- | -------- | ------ |
+| id   | 是       | 订单id |
 
 
 
@@ -96,3 +109,19 @@ https://m.kuaidi100.com/index_all.html?type=[快递公司编码]&postid=[快递�
 callback地址，经测试填入javascript:alert(1);会生效，意味着前端开发者可以利用该特性填入js方法。
 
 [《快递100文档》](https://www.kuaidi100.com/openapi/mobileapi.shtml)
+
+
+
+## 修改订单价格
+
+```html
+POST /order/changePrice
+```
+
+| 参数               | 是否必填 | 说明                                                         |
+| ------------------ | -------- | ------------------------------------------------------------ |
+| revise_goods       | 是       | 订单商品 数组 格式 [['id'=>1,'difference_price'=>8], ['id'=>1,'difference_price'=>-8].......]   id 为 order_goods表id，difference_price为差价 可正可负 |
+| revise_freight_fee | 是       | 修改过的实际支付的运费 必须大于等于0                         |
+
+备注：目前只支持普通未支付的订单，不适用于拼团。
+
