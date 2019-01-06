@@ -9,8 +9,8 @@
 ```json
 {
     "sign":"识别标识，作为服务器端给fd发送的标识",
-    "type":"login",
-    "data": {
+    "action":"admin.login",
+    "param": {
         "access_token":"xxxxxxxxxxxxxxxx"
     }
 }
@@ -21,7 +21,7 @@
 ```json
 {
     "sign":"客户端发来的标识",
-    "type":"login",
+    "action":"admin.login",
     "code" : 0
 }
 ```
@@ -42,7 +42,7 @@
 
 ```json
 {
-    "type":"notice.order.new",
+    "action":"admin.order.new",
     "code" : 0,
     "data" : {
         "info":{
