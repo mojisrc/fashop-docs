@@ -57,6 +57,8 @@ POST /order/setSend
 | shipping_code   | 否    | 物流单号                |
 | remark          | 否    | 备注信息                |
 
+> 同时用在修改发货信息的场景下，但是当订单已经确认收货了将不可以再修改
+
 ## 订单状态量
 
 ```html
