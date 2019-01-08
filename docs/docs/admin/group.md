@@ -85,13 +85,12 @@ GET /Group/selectableGoods
 
 | 参数         | 是否必填 | 说明            |
 | ------------ | -------- | --------------- |
-| group_id     | 是       | 拼团活动id      |
 | title        | 否       | 商品名称        |
 | category_ids | 否       | 分类id 数组格式 |
 
 
 
-## 拼团活动已选择商品列表
+## 拼团活动已选择商品列表 废弃
 
 ```html
 GET /Group/selectedGoods
@@ -109,10 +108,79 @@ GET /Group/selectedGoods
 GET /Group/goodsSkuList
 ```
 
-| 参数     | 是否必填 | 说明           |
-| -------- | -------- | -------------- |
-| group_id | 是       | 拼团活动id     |
-| goods_id | 是       | 拼团活动商品id |
+| 参数     | 是否必填 | 说明       |
+| -------- | -------- | ---------- |
+| group_id | 是       | 拼团活动id |
+
+```
+{
+    "code": 0,
+    "result": {
+        "total_number": 2,
+        "list": [
+            {
+                "id": 1,
+                "goods_id": 1,
+                "spec": [
+                    {
+                        "id": 1,
+                        "name": "颜色",
+                        "value_id": 1,
+                        "value_name": "白色"
+                    }
+                ],
+                "price": "0.01",
+                "stock": 3333,
+                "code": "1",
+                "img": "http://192.168.178.134/Upload/20190103/F795chaYJIiwxES.jpeg",
+                "weight": 0,
+                "title": "iphone 白色",
+                "sale_num": 0,
+                "group_sale_num": 0,
+                "spec_value_sign": "[1]",
+                "spec_sign": "[1]",
+                "create_time": 1546497554,
+                "update_time": null,
+                "delete_time": null,
+                "group_id": 4,
+                "group_price": "0.10",
+                "captain_price": "0.01"
+            },
+            {
+                "id": 2,
+                "goods_id": 1,
+                "spec": [
+                    {
+                        "id": 1,
+                        "name": "颜色",
+                        "value_id": 2,
+                        "value_name": "蓝色"
+                    }
+                ],
+                "price": "0.01",
+                "stock": 3333,
+                "code": "2",
+                "img": "http://192.168.178.134/Upload/20190103/F795chaYJIiwxES.jpeg",
+                "weight": 0,
+                "title": "iphone 蓝色",
+                "sale_num": 0,
+                "group_sale_num": 0,
+                "spec_value_sign": "[2]",
+                "spec_sign": "[1]",
+                "create_time": 1546497554,
+                "update_time": null,
+                "delete_time": null,
+                "group_id": 4,
+                "group_price": "0.20",
+                "captain_price": "0.02"
+            }
+        ]
+    },
+    "msg": null
+}
+```
+
+
 
 
 
