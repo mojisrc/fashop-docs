@@ -182,3 +182,226 @@ TemplateObjectModel
 | template_name   | String | 是 | 属于备注，帮助前端方便输出显示                        |
 
 > 当添加或者修改时，如template_variable是接口必须用到的，添加修改不起作用，仅为照顾版本升级
+
+
+
+- `goods_poster` 商品海报
+
+```json
+{
+    options: {
+            backgroundColor: "#ffffff"
+        },
+    body: [
+            {
+                type: "goods_img",
+                options: {
+                    size: {
+                        width: 284,
+                        height: 284
+                    },
+                    position: {
+                        x: 20,
+                        y: 20
+                    }
+                }
+
+            },
+            {
+                type: "goods_title",
+                options: {
+                    size: {
+                        width: 285,
+                        height: 42
+                    },
+                    fontColor: "#333",
+                    fontSize: 14,
+                    position: {
+                        x: 20,
+                        y: 284 + 20 + 10
+                    }
+                }
+            },
+            {
+                type: "goods_price",
+                options: {
+                    size: {
+                        width: 100,
+                        height: 20
+                    },
+                    fontColor: "#ff3201d9",
+                    fontSize: 20,
+                    position: {
+                        x: 20,
+                        y: 464 - 20 - 20
+                    }
+                }
+            },
+            {
+                type: "mini_qr",
+                options: {
+                    size: {
+                        width: 76,
+                        height: 76
+                    },
+                    position: {
+                        x: 324 - 76 - 20,
+                        y: 464 - 20 - 76
+                    }
+                }
+
+            }
+}
+```
+
+- `group_goods_poster` 拼团海报
+
+注意z-index 层级  什么元素都可以挡住商品图
+
+```json
+options: {
+            backgroundColor: "#ffffff",
+            backgroundImage: null,
+        },
+        body: [
+            {
+                type: "goods_img",
+                options: {
+                    size: {
+                        width: 284,
+                        height: 284
+                    },
+                    position: {
+                        x: 20,
+                        y: 20+30+20
+                    }
+                }
+
+            },
+            {
+                type: "avatar",
+                options: {
+                    size: {
+                        width: 30,
+                        height: 30
+                    },
+                    position: {
+                        x: 20,
+                        y: 20
+                    },
+                    borderRadius:60
+                }
+
+            },
+            {
+                type: "nickname",
+                options: {
+                    size: {
+                        width: 56,
+                        height: 20
+                    },
+                    position: {
+                        x: 20 + 30 + 10,
+                        y: 20+3
+                    },
+                    fontSize:14,
+                    fontColor:'#1890FF'
+                }
+
+            },
+            {
+                type: "slogan",
+                options: {
+                    size: {
+                        width: 116,
+                        height: 20
+                    },
+                    position: {
+                        x: 20 + 30 + 10 + 56 + 10,
+                        y: 20+3
+                    },
+                    fontContent:'正在拼团 赶快加入',
+                    fontSize:14,
+                    fontColor:'#999999'
+                }
+
+            },
+            {
+                type: "group_number",
+                options: {
+                    size: {
+                        width: 48,
+                        height: 20
+                    },
+                    position: {
+                        x: 20+5,
+                        y: 20+30+20+5
+                    },
+                    fontSize:12,
+                    fontColor:'#ffffff',
+                    fontBackgroundColor:'#FF5127'
+                }
+
+            },
+            {
+                type: "goods_title",
+                options: {
+                    size: {
+                        width: 196,
+                        height: 42
+                    },
+                    fontColor: "#333",
+                    fontSize: 14,
+                    position: {
+                        x: 20,
+                        y: 464 - 20 - 76
+                    }
+                }
+            },
+            {
+                type: "goods_group_price",
+                options: {
+                    size: {
+                        width: 80,
+                        height: 20
+                    },
+                    fontColor: "#FF5127",
+                    fontSize: 20,
+                    position: {
+                        x: 20,
+                        y: 464 - 20 - 20
+                    }
+                }
+            },
+            {
+                type: "goods_price",
+                options: {
+                    size: {
+                        width: 80,
+                        height: 20
+                    },
+                    fontColor: "#999999",
+                    fontSize: 14,
+                    position: {
+                        x: 20+5+80,
+                        y: 464 - 20 - 20
+                    }
+                }
+            },
+            {
+                type: "mini_qr",
+                options: {
+                    size: {
+                        width: 76,
+                        height: 76
+                    },
+                    position: {
+                        x: 324 - 76 - 20,
+                        y: 464 - 20 - 76
+                    }
+                }
+
+            }
+        ]
+```
+
