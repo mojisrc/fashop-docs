@@ -185,14 +185,26 @@ TemplateObjectModel
 
 
 
-- `goods_poster` 商品海报
+- `poster_goods` 商品海报
 
 ```json
 {
-    options: {
-            backgroundColor: "#ffffff"
-        },
-    body: [
+    body:[
+            {
+                type: "background",
+                options: {
+                    size: {
+                        width: maxWidth,
+                        height: maxHeight
+                    },
+                    position: {
+                        x: 0,
+                        y: 0
+                    },
+                    backgroundColor: "#ffffff",
+                    backgroundImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547118722752&di=2e6b80b4d9d2bdd4c5593e86c54c98c0&imgtype=0&src=http%3A%2F%2Fpic35.photophoto.cn%2F20150521%2F0008020222046830_b.jpg"
+                }
+            },
             {
                 type: "goods_img",
                 options: {
@@ -229,11 +241,11 @@ TemplateObjectModel
                         width: 100,
                         height: 20
                     },
-                    fontColor: "#ff3201d9",
+                    fontColor: "#FF5127",
                     fontSize: 20,
                     position: {
                         x: 20,
-                        y: 464 - 20 - 20
+                        y: maxHeight - 20 - 20
                     }
                 }
             },
@@ -245,25 +257,36 @@ TemplateObjectModel
                         height: 76
                     },
                     position: {
-                        x: 324 - 76 - 20,
-                        y: 464 - 20 - 76
+                        x: maxWidth - 76 - 20,
+                        y: maxHeight - 20 - 76
                     }
                 }
 
             }
+        ]
 }
 ```
 
-- `group_goods_poster` 拼团海报
-
-注意z-index 层级  什么元素都可以挡住商品图
+- `poster_group_goods` 拼团海报
 
 ```json
-options: {
-            backgroundColor: "#ffffff",
-            backgroundImage: null,
-        },
-        body: [
+{
+    body:[
+            {
+                type: "background",
+                options: {
+                    size: {
+                        width: maxWidth,
+                        height: maxHeight
+                    },
+                    position: {
+                        x: 0,
+                        y: 0
+                    },
+                    backgroundColor: "#ffffff",
+                    backgroundImage: ""
+                }
+            },
             {
                 type: "goods_img",
                 options: {
@@ -273,7 +296,7 @@ options: {
                     },
                     position: {
                         x: 20,
-                        y: 20+30+20
+                        y: 20 + 30 + 20
                     }
                 }
 
@@ -289,7 +312,7 @@ options: {
                         x: 20,
                         y: 20
                     },
-                    borderRadius:60
+                    borderRadius: 60
                 }
 
             },
@@ -302,13 +325,14 @@ options: {
                     },
                     position: {
                         x: 20 + 30 + 10,
-                        y: 20+3
+                        y: 20 + 3
                     },
-                    fontSize:14,
-                    fontColor:'#1890FF'
+                    fontSize: 14,
+                    fontColor: "#1890FF"
                 }
 
             },
+
             {
                 type: "slogan",
                 options: {
@@ -318,11 +342,11 @@ options: {
                     },
                     position: {
                         x: 20 + 30 + 10 + 56 + 10,
-                        y: 20+3
+                        y: 20 + 3
                     },
-                    fontContent:'正在拼团 赶快加入',
-                    fontSize:14,
-                    fontColor:'#999999'
+                    fontContent: "正在拼团 赶快加入",
+                    fontSize: 14,
+                    fontColor: "#999999"
                 }
 
             },
@@ -334,12 +358,12 @@ options: {
                         height: 20
                     },
                     position: {
-                        x: 20+5,
-                        y: 20+30+20+5
+                        x: 20 + 5,
+                        y: 20 + 30 + 20 + 5
                     },
-                    fontSize:12,
-                    fontColor:'#ffffff',
-                    fontBackgroundColor:'#FF5127'
+                    fontSize: 12,
+                    fontColor: "#ffffff",
+                    fontBackgroundColor: "#FF5127"
                 }
 
             },
@@ -383,7 +407,7 @@ options: {
                     fontColor: "#999999",
                     fontSize: 14,
                     position: {
-                        x: 20+5+80,
+                        x: 20 + 5 + 80,
                         y: 464 - 20 - 20
                     }
                 }
@@ -403,5 +427,6 @@ options: {
 
             }
         ]
+}
 ```
 
