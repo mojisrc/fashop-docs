@@ -4,10 +4,10 @@
 GET - /Group/list
 ```
 
-| 参数     | 是否必填 | 说明                                                         |
-| -------- | -------- | ------------------------------------------------------------ |
-| keywords | 否       | 关键词 活动名称                                              |
-| state    | 否       | 状态 0未开始 10已开始未生效 20已开始生效中 30已过期未生效 40已过期生效中 |
+| 参数     | 是否必填 | 说明                                    |
+| -------- | -------- | --------------------------------------- |
+| keywords | 否       | 关键词 活动名称                         |
+| state    | 否       | 状态 0未开始 10进行中 20已结束 30已失效 |
 
 
 
@@ -39,9 +39,9 @@ POST /Group/add
      * @param string limit_buy_num      拼团人数
      * @param string limit_group_num    每位用户可进行的团数
      * @param string limit_goods_num    用户每次参团时可购买件数
-     * @param array  group_goods        数组 格式 [ ['goods_id'=>1,'goods_sku_id'=>1,'group_price'=>1,'captain_price'=>1],['goods_id'=>2,'goods_sku_id'=>2,'group_price'=>2,'captain_price'=>2...] ] 商品选择数组 可为空数组
+     * @param array  group_goods        数组 格式 [ ['goods_id'=>1,'goods_sku_id'=>1,'group_price'=>1,'captain_price'=>1],['goods_id'=>2,'goods_sku_id'=>2,'group_price'=>2,'captain_price'=>2...] ] 商品选择数组 
      * 注释：
-     * goods_id         商品主表id
+     * goods_id         商品主表id 只能选择一个商品 group_goods里goods_id必须为一
      * goods_sku_id     商品id
      * group_price      拼团价格
      * captain_price    团长价格
@@ -66,13 +66,13 @@ POST /Group/edit
      * @param string limit_buy_num      拼团人数
      * @param string limit_group_num    每位用户可进行的团数
      * @param string limit_goods_num    用户每次参团时可购买件数
-     * @param array  group_goods        数组 格式 [ ['goods_id'=>1,'goods_sku_id'=>1,'group_price'=>1,'captain_price'=>1],['goods_id'=>2,'goods_sku_id'=>2,'group_price'=>2,'captain_price'=>2...] ] 商品选择数组 可为空数组
+     * @param array  group_goods        数组 格式 [ ['goods_id'=>1,'goods_sku_id'=>1,'group_price'=>1,'captain_price'=>1],['goods_id'=>2,'goods_sku_id'=>2,'group_price'=>2,'captain_price'=>2...] ] 商品选择数组 
      * 注释：
-     * goods_id         商品主表id
+     * goods_id         商品主表id 只能选择一个商品 group_goods里goods_id必须为一样
      * goods_sku_id     商品id
      * group_price      拼团价格
      * captain_price    团长价格
-     * 备注：如果只想改活动不想改商品的话 group_goods传递后台所有的数据源信息[上面格式的商品数据信息]，不可为空 为空代表删除所有商品
+     * 备注：正在进行不可以修改规格 所以用不上group_goods
 ```
 
 
