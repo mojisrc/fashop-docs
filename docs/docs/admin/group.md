@@ -72,7 +72,7 @@ POST /Group/edit
      * goods_sku_id     商品id
      * group_price      拼团价格
      * captain_price    团长价格
-     * 备注：正在进行不可以修改规格 所以用不上group_goods
+     * 备注：正在进行不可以修改规格
 ```
 
 
