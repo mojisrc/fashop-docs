@@ -4,25 +4,21 @@
 
 1、通过筛选条件，来查找订单信息，查看订单的状态每一项的信息。
 
-![](./images/zhang_order_41..png)
+![](./images/zhang_order_41.png)
 
 筛选条件选择不同选项
 
 如图所示：
 
-![](./images/zhang_order_4.png)
 
 
 
 2、待付款状态，可以查看下单商品信息，收货人信息，可以更改价格，前提是在待付款状态。
 
-![](./images/zhang_order_21..png)
 
 
 
 3、待发货状态下，可以进行发货，修改地址，可以修改用户的收货地址。
 
-![](./images/zhang_order_51..png)
-=======
+![](./images/zhang_order_51.png)
 为什么要有取消订单？ 待完善说明
->>>>>>> b6ae856ec8adb41ec4f22e9f7d6d513f4be63502
