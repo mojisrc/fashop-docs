@@ -46,8 +46,6 @@ user_id : 当前触发行为的用户id
 
 relation_user_id:关联用户id，比如分享行为，a分享出去，b点击的，那么b是user_id(当前行为id),
 
-link_id:手动约束好每个链接的地址id，比如：商品1，页面2，首页3，拼团4…..根据每次需要增加，文档说明
-
 link_pk:链接的主键值，比如商品链接，那就是商品的id
 
 link_route:链接路由地址，如，1代表 /pages/page/detail，用数字
@@ -56,7 +54,7 @@ link_pathinfo:链接的参数了，格式是为id=1&category_id=xxxx&keywords=xx
 
 ip
 
-form_soure:来源，1微信小程序 2app  3 微信手机站 4 手机站 5pc站
+from_soure:来源，1微信小程序 2app  3 微信手机站 4 手机站 5pc站
 
 user_agent：如：Mozilla/5.0 (Linux; U; Android 4.3; zh-cn; R8007 Build/JLS36C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30  
 
