@@ -187,3 +187,95 @@ GET - /auth/userList
 | -------- | ------ | -------- | --------------------------- |
 | keywords | String | 否       | 关键词，搜索username和phone |
 
+#### 系统权限介绍
+
+**规范**
+
+> 模块命名全为小写，具体方法为骆峰式，如：orderreturn/receiveSomeXx
+
+- 全部权限
+
+```json
+{"Statement": [{"Action": ["*"], "Effect": "Allow"}]}
+```
+
+- 订单
+
+```json
+{"Statement": [{"Action": ["order/*"], "Effect": "Allow"}]}
+```
+
+- 退款退货
+
+```json
+{"Statement": [{"Action": ["orderrefund/*"], "Effect": "Allow"}]}
+```
+
+- 评价
+
+```json
+{"Statement": [{"Action": ["goodsevalute/*"], "Effect": "Allow"}]}
+```
+
+- 配置
+
+```json
+{"Statement": [{"Action": ["setting/*"], "Effect": "Allow"}]}
+```
+
+- 商家地址库
+
+```json
+{"Statement": [{"Action": ["shipper/*"], "Effect": "Allow"}]}
+```
+
+- 物流公司
+
+```json
+{"Statement": [{"Action": ["express/*"], "Effect": "Allow"}]}
+```
+
+- 运费模板
+
+```json
+{"Statement": [{"Action": ["freight/*"], "Effect": "Allow"}]}
+```
+
+- 商品
+
+```json
+{"Statement": [{"Action": ["goods/*","goodscategory/*","goodsspec/*","goodsspecvalue/*"], "Effect": "Allow"}]}
+```
+
+> 包含了商品、商品分类、商品规格、商品规格值（规格的子项）
+
+- 客户
+
+```json
+{"Statement": [{"Action": ["user/*"], "Effect": "Allow"}]}
+```
+
+- 权限
+
+```json
+{"Statement": [{"Action": ["auth/*"], "Effect": "Allow"}]}
+```
+
+- 店铺
+
+```json
+{"Statement": [{"Action": ["shop/*"], "Effect": "Allow"}]}
+```
+
+- 店铺制作页面
+
+```json
+{"Statement": [{"Action": ["page/*"], "Effect": "Allow"}]}
+```
+
+- 数据统计（概况）
+
+```json
+{"Statement": [{"Action": ["statistics/*"], "Effect": "Allow"}]}
+```
+
