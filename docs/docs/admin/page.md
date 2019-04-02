@@ -165,7 +165,7 @@ GET - /page/info
   ],
   "options" : {
     "layout_style" : 1,
-      "goods_title_rows" :1
+     "goods_title_rows" :1
   }
 }
 ```
@@ -205,7 +205,18 @@ GET - /page/info
 }
 ```
 
+#### 积分商品列表
 
+商品排序：最新商品（上架从晚到早）`1`、最热商品（销量从高到低）`2`、商品排序（序号有大到小）`3`  `4`、积分可抵扣由高到底
+
+加载方式：限制个数
+加载数量：前6个商品`6`、前12个商品`12`、前18个商品`18` 
+
+展示形式：大图`1`、小图`2`、一大两小`3`、列表`4`
+
+显示内容：商品名称`title`、商品销售价`price`、商品原价`market_price`
+
+标题行数：一行`1`、两行`2` 
 
 #### 商品搜索
 
@@ -515,7 +526,48 @@ GET - /page/info
     ]
 }
 ```
+#### 秒杀
 
+数据来源`source_type`：自动`auto`、选择`choose`
+
+商品排序`goods_sort`：销量多到少`1`、价格高到低`2`、价格低到高`3`
+
+显示数量`goods_display_num`：`3`， 最多12件，最少1件
+
+展示形式`layout_style`：大图`1`、小图`2`、列表`4`、轮播`5`
+
+标题行数：一行`1`、两行`2`    
+
+> 默认自动添加、显示数量3、排序销量多到少、列表样式
+>
+> "data" 后端仅使用id，其他最终返回给客户端的数据都以商品表为准
+>
+> 传入对象是为了拓展，如：商品封面图替换，描述替换等
+>
+> 后端返回的商品库存应该是秒杀时的商品库存
+
+```json
+{
+    "type" : "goods_seckill",
+    "options":{
+        "source_type": "auto", 
+        "goods_display_num": 3, 
+        "goods_sort":1,
+        "layout_style":4,
+        "goods_title_rows":1,
+    },
+    "data":[
+        { 
+          "id" : 1,
+          "img" : "http://xxxx.jpg",
+          "title" : "测试商品",
+          "price" : 200,
+          "market_price" : 300,
+          "desc" : "描述"
+        }
+    ]
+}
+```
 
 
 ## 链接说明
@@ -1214,6 +1266,6 @@ link.action = "url" 页面  param { "url" : "http://fashop.cn"}
             },
         ]
 ```
-
+## 
 
 

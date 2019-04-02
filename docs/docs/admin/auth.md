@@ -1,6 +1,12 @@
 # 权限管理
 
-## 策略列表
+## 当前成员权限策略
+
+```html
+GET - /auth/selfPolicy
+```
+
+##策略列表
 
 ```
 GET - /auth/policyList
