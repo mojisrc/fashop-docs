@@ -530,6 +530,8 @@ GET - /page/info
 
 数据来源`source_type`：自动`auto`、选择`choose`
 
+秒杀时间点`hours`：`[0,1,2…..23]`
+
 商品排序`goods_sort`：销量多到少`1`、价格高到低`2`、价格低到高`3`
 
 显示数量`goods_display_num`：`3`， 最多12件，最少1件
