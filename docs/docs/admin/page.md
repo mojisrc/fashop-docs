@@ -569,6 +569,25 @@ GET - /page/info
 }
 ```
 
+#### 优惠券
+
+数据来源`source_type`：自动`auto`、选择`choose`
+
+```json
+{
+    "type" : "coupon",
+    "options":{
+        "source_type": "auto", 
+    },
+    "data":[
+        { 
+          "id" : 1,
+        }
+    ]
+}
+```
+
+
 
 ## 链接说明
 
