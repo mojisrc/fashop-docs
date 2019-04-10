@@ -207,16 +207,42 @@ GET - /page/info
 
 #### 积分商品列表
 
-商品排序：最新商品（上架从晚到早）`1`、最热商品（销量从高到低）`2`、商品排序（序号有大到小）`3`  `4`、积分可抵扣由高到底
+> 不可抵扣的商品不应该出现在积分商品列表里
 
-加载方式：限制个数
-加载数量：前6个商品`6`、前12个商品`12`、前18个商品`18` 
+数据来源`source_type`：自动`auto`、选择`choose`
 
-展示形式：大图`1`、小图`2`、一大两小`3`、列表`4`
+商品排序`goods_sort`：最新积分商品（上架从晚到早）`1`、最热积分商品（销量从高到低）`2`、 `4`、积分可抵扣由高到底
 
-显示内容：商品名称`title`、商品销售价`price`、商品原价`market_price`
+显示数量`goods_display_num`：`3`， 最多12件，最少1件
 
-标题行数：一行`1`、两行`2` 
+展示形式`layout_style`：大图`1`、小图`2`、一大两小`3`、列表`4`
+
+标题行数`goods_title_rows`：一行`1`、两行`2`    
+
+```json
+{
+  "type" : "points_goods_list",
+  "options" : {
+    "goods_sort" : 1,
+    "goods_display_num" : 6,
+    "goods_display_field" : ["title","price","market_price"],
+    "layout_style" : 1,
+    "goods_title_rows" :1
+  },
+  "data" : [
+    { 
+      "id" : 1,
+      "img" : "http://xxxx.jpg",
+      "title" : "测试商品",
+      "price" : 200,
+      "market_price" : 300,
+      "desc" : "描述"
+    }
+  ]
+}
+```
+
+
 
 #### 商品搜索
 
@@ -595,6 +621,27 @@ GET - /page/info
     ]
 }
 ```
+
+### 富文本
+
+背景色`background_color`：#fff 默认
+
+内边距`padding`:10 默认
+
+```json
+{
+    "type" : "rich_text",
+    "options":{
+        "background_color":"#ffffff",
+        "padding":10
+    },
+    "data":{
+        "html_content":"请输入内容..."
+    }
+}
+```
+
+
 
 
 
